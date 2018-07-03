@@ -1,0 +1,28 @@
+---
+- name: Install apt package to use a repository over HTTPS / Installation des package pré-requis à Docker
+  become: yes
+  apt: name={{item}} update_cache=yes
+  state: "present"
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - software-properties-common
+
+- name: Add Docker’s official GPG key / Ajout de la clé GPG officielle de Docker
+  become: yes
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+
+- name: Add Docker's stable repository / Ajout du repo apt Docker
+  become: yes
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ansible_distribution_release}} stable
+
+- name: Install Docker CE / Installation de Docker
+  become: yes
+  apt: name=docker-ce update_cache=yes
+
+
+
+  
