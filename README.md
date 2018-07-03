@@ -1,4 +1,6 @@
-# Overview
+[English](#english)
+[Français](#french)
+# <a name="english"></a>Overview
 
 **OS Requirement :** This procedure works for Ubuntu based OS (Ubuntu, Linux Mint)
 
@@ -40,7 +42,7 @@ After the installation is complete, Docker should be installed on your computer.
 After that, the current user (**$USER**) will be added to the docker group and will be able to use docker commands directly.  
 :warning: You need to logout/login for that change to be applied.
 
-# Objet
+# <a name="french"></a>Objet
 
 **OS Concernés :** Cette procédure fonctionne avec des OS basés sur Ubuntu (Ubuntu, Linux Mint)
 
